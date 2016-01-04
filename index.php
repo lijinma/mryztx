@@ -41,7 +41,7 @@ body { font-size:17px;
             $z = $_GET['p'];
         }
         else {
-            $z = date('z') + 2;
+            $z = date('z') - 2;
         }
         ?>
         <a class="btn btn-success pull-left" href="index.php?p=<?php echo $z-1;?>">上一篇</a>
@@ -49,18 +49,12 @@ body { font-size:17px;
         <br>
     <h2>
         <?php
-        if (isset ($_GET['p'])) {
-            $date_number_in_a_year = $_GET['p']-2;
-        }
-        else {
-            $date_number_in_a_year = date('z');
-        }
-        $milliseconds = mktime(0,0,0,1,1,date('Y')) + $date_number_in_a_year * 86400;
+        $milliseconds = mktime(0,0,0,1,1,date('Y')) + ($z + 2) * 86400;
         echo date('Y年m月d日',$milliseconds); 
         ?>
     </h2>
         <?php
-        $lines = file("pages/".($z-4).".html"); 
+        $lines = file("pages/".$z.".html"); 
         foreach ($lines as $line) {
           $line = str_replace('&#160;', '', $line);
           $line = str_replace('<u> 月</u>', '', $line);
@@ -74,6 +68,22 @@ body { font-size:17px;
     <br>
     </div>
     <br><br><br>
+    <!-- 多说评论框 start -->
+    	<div class="ds-thread" data-thread-key="<?= $z ?>" data-title="" data-url=""></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"mryztx"};
+    	(function() {
+    		var ds = document.createElement('script');
+    		ds.type = 'text/javascript';ds.async = true;
+    		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    		ds.charset = 'UTF-8';
+    		(document.getElementsByTagName('head')[0] 
+    		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+    	})();
+    	</script>
+    <!-- 多说公共JS代码 end -->
 <?php
 include_once ('footer.php');
 ?>

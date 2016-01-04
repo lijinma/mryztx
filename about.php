@@ -42,10 +42,25 @@ body { font-size:17px;
 
         资料来源：<a href="http://www.jonahome.net/files02/PI_SGrowth-Day-Walk/gb/" target="_blank">http://www.jonahome.net/</a><br><br>
 
-        如果有任何建议请发送邮件到：lijinma#126.com (将#换成@)，或者到我博客留言 <a href="http://www.lijinma.com" target="_blank">http://www.lijinma.com</a><br><br>
+        如果有任何建议请留言<br><br>
     </div>
     
-
+    <!-- 多说评论框 start -->
+    	<div class="ds-thread" data-thread-key="all" data-title="" data-url=""></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"mryztx"};
+    	(function() {
+    		var ds = document.createElement('script');
+    		ds.type = 'text/javascript';ds.async = true;
+    		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    		ds.charset = 'UTF-8';
+    		(document.getElementsByTagName('head')[0] 
+    		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+    	})();
+    	</script>
+    <!-- 多说公共JS代码 end -->
     </div>
 <?php
 include_once ('footer.php');
