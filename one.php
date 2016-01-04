@@ -65,7 +65,9 @@
         $line = str_replace('章 日', '章', $line);
         $line = preg_replace('/(第\d日)/', ' $1<span class="btn btn-large btn-primary disabled">', $line);
         $line = preg_replace('/(第\d、\d日)/', ' $1<span class="btn btn-large btn-primary disabled">', $line);
-        $line = str_replace('<table', '<table class="table"', $line);
+        $line = str_replace('<table', '<div class="table-responsive">
+<table class="table"', $line);
+        $line = str_replace('</table>', '</table></div>', $line);
         echo $line;
     }
     ?>
