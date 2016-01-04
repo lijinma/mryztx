@@ -12,6 +12,10 @@
         body {
             font-size: 17px;
         }
+        .table-responsive
+        {
+            overflow-x: auto;
+        }
     </style>
 
     <title>每日与主同行</title>
@@ -66,7 +70,7 @@
         $line = preg_replace('/(第\d日)/', ' $1<span class="btn btn-large btn-primary disabled">', $line);
         $line = preg_replace('/(第\d、\d日)/', ' $1<span class="btn btn-large btn-primary disabled">', $line);
         $line = str_replace('<table', '<div class="table-responsive">
-<table class="table"', $line);
+<table class="table "', $line);
         $line = str_replace('</table>', '</table></div>', $line);
         echo $line;
     }
