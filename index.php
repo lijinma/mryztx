@@ -22,6 +22,7 @@
     </style>
 
     <title>每日与主同行</title>
+    <meta name="description" content="苏颖智,每日与主同行" />
 
 </head>
 
