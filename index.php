@@ -12,17 +12,18 @@
         body {
             font-size: 18px;
         }
+
         p {
             line-height: 28px;
         }
-        .table-responsive
-        {
+
+        .table-responsive {
             overflow-x: auto;
         }
     </style>
 
     <title>每日与主同行</title>
-    <meta name="description" content="苏颖智,每日与主同行" />
+    <meta name="description" content="苏颖智,每日与主同行"/>
 
 </head>
 
